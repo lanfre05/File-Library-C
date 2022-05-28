@@ -11,6 +11,7 @@ You can add the library with #include and the library file path (relative or abs
                 #include "C:/User/Desktop/Program/Library/fie.h"
            
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 DATA TYPE FROM THE FILE LIBRARY
 
 The file library permit to use all the data type used in the standard library (stdio.h) and other implemented libraries.
@@ -35,4 +36,5 @@ These are the functions available from the file library:
   
   fcopy()   -->  a function copying the content of the second declared file to the first one
   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
