@@ -35,6 +35,6 @@ These are the functions available from the file library:
   fview()   -->  a function printing the content of the passed file
   
   fcopy()   -->  a function copying the content of the second declared file to the first one
-  
+   
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
