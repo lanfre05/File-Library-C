@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-typedef FILE* file;													
+typedef FILE* file;
+typedef char* buffer;
 
 void fcontrol(file);												
 size_t flen(file);	
