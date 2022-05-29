@@ -15,7 +15,7 @@ You can add the library with #include and the library file path (relative or abs
 DATA TYPES FROM THE FILE LIBRARY
 
 The file library permit to use all the data type used in the standard library (stdio.h) and other implemented libraries.
-There are two new data type:
+The file.h library introduces a new data type:
 
    file     -->      a shorter declaration of a file pointer
    
