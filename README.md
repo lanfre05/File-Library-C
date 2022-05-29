@@ -19,8 +19,6 @@ There are two new data type:
 
    file     -->      a shorter declaration of a file pointer
    
-   buffer   -->      a string used for conteining text from the file
-   
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
                 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,13 +26,19 @@ FUNCTION FROM THE FILE LIBRARY
 
 These are the functions available from the file library:
 
-  fcontrol()   -->  a void function interrupting the execution of the program with an error if the opened passed file doesn't exist
+  fcontrol(FilePointer)   -->  a void function interrupting the execution of the program with an error if the opened passed FilePointer doesn't exist
   
-  flen()   -->  a function returning an integer value reporting the passed file lenght in characters
+  flen(FilePointer)   -->  a function returning an integer value reporting the FilePointer lenght in characters
   
-  fview()   -->  a function printing the content of the passed file
+  fview(FilePointer)   -->  a function printing the content of FilePointer
   
-  fcopy()   -->  a function copying the content of the second declared file to the first one
+  fcopy(FileCopy,FileOrig)   -->  a function copying the content of FileOrig file to FileCopy
+  
+  fcompare(File1,File2)  --> a function returning an integer value containing the difference of the characters value of two files
+                             >0 if File1 is greater / =0 if File1 is equal to File2 / <0 if File2 is greater
+                  
+  freplace(FilePointer,StringToFind,NewString)  -->  a function replacing every StringToFind in the FilePointer with NewString
+                                                     it returns the integer number of replacements done
    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
