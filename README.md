@@ -8,7 +8,7 @@ You can add the library with #include and the library file path (relative or abs
 
     Example:    #include "file.h"
                 #include "../Library/file.h"                  
-                #include "C:/User/Desktop/Program/Library/fie.h"
+                #include "C:/User/Desktop/Program/Library/file.h"
            
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
