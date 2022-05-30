@@ -8,7 +8,9 @@ typedef FILE* file;
 void fcontrol(file);												
 size_t flen(file);	
 void fview(file);													
-void fcopy(file,file);												
+void fcopy(file,file);	
+int fcompare(file,file);
+long int fsearch(file,char*);
 
 void fcontrol(file FilePointer){
 	if( FilePointer==NULL ){	perror("Error");	exit(1); }		
@@ -56,26 +58,22 @@ int fcompare(file File1, file File2){
 	return (File1Counter - File2Counter);
 }
 
-size_t freplace(file FilePointer, char *StringToFind, char *NewString){
-	long int position = ftell(FilePointer);
-	size_t i, j, EqualCharCounter = 0, CountReplacement = 0;
-	char buffer[flen(FilePointer)];
-	fread(buffer, 1, flen(FilePointer), FilePointer);
+long int fsearch(file FilePointer,char *StringToFind){
+	size_t i, EqualCharCounter = 0;
+	long int PositionSave, PositionOrig = ftell(FilePointer);
 	fseek(FilePointer, 0, SEEK_SET);
-	for(i=0; i<strlen(buffer); i++){
-		if( buffer[i] == StringToFind[0] ){
+	while( !feof(FilePointer) ){
+		PositionSave = ftell(FilePointer);
+		if( fgetc(FilePointer) == StringToFind[0] ){
 			EqualCharCounter++;
-			for(j=1; StringToFind[j]!='\0'; j++){
-				if( buffer[i+j] == StringToFind[j] ){ 	EqualCharCounter++; }
+			for(i=1; i<strlen(StringToFind); i++){
+				if( fgetc(FilePointer) == StringToFind[i] ){	EqualCharCounter++; }
 			}
 			if( EqualCharCounter == strlen(StringToFind) ){
-				EqualCharCounter = 0;
-				for(j=0; NewString[j]!='\0'; j++){	fputc(NewString[j], FilePointer); }
-				CountReplacement++;
-				i += (strlen(StringToFind)-1);
-			}else{	fputc(buffer[i], FilePointer); }
-		}else{	fputc(buffer[i], FilePointer); }	
+				fseek(FilePointer, PositionOrig, SEEK_SET);
+				return PositionSave;
+			}else{	PositionSave = (-1); }
+		}
 	}
-	fseek(FilePointer, position, SEEK_SET);
-	return CountReplacement;
+	return PositionSave;
 }
