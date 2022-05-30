@@ -37,8 +37,8 @@ These are the functions available from the file library:
   fcompare(File1,File2)  --> a function returning an integer value containing the difference of the characters value of two files
                              >0 if File1 is greater / =0 if File1 is equal to File2 / <0 if File2 is greater
                   
-  freplace(FilePointer,StringToFind,NewString)  -->  a function replacing every StringToFind in the FilePointer with NewString
-                                                     it returns the integer number of replacements done
+  fsearch(file FilePointer, char *StringToFind)  -->   a function returning the position of the first character of StringToFind inside FilePointer
+                                                       it returns <0 if the string isn't found
    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
