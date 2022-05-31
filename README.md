@@ -1,5 +1,5 @@
-The library file.h is a library containing useful functions for file management in C language, it's created for being an extension of the standard library (stdio.h)
-
+The file library conteins useful functions for file management in C language, it's created for being an extension of the standard library (stdio.h) 
+NOTE: most of the functions require that the managed file pointer is open on specific modes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 HOW TO IMPLEMENT THE FILE LIBRARY  (for Beginners)
 
@@ -19,8 +19,7 @@ The file.h library introduces a new data type:
 
    file     -->      a shorter declaration of a file pointer
    
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
-                
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 FUNCTIONS FROM THE FILE LIBRARY
 
@@ -32,7 +31,7 @@ These are the functions available from the file library:
   
   fview(FilePointer)   -->  a function printing the content of FilePointer
   
-  fcopy(FileCopy,FileOrig)   -->  a function copying the content of FileOrig file to FileCopy
+  fcopy(FileCopy,FileOrig)   -->  a function copying the content of FileOrig (r/r+) file to FileCopy (w/w+/a/a+)
   
   fcompare(File1,File2)  --> a function returning an integer value containing the difference of the characters value of two files
                              >0 if File1 is greater / =0 if File1 is equal to File2 / <0 if File2 is greater
