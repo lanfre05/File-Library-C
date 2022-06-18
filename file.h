@@ -3,14 +3,16 @@
 #include <stdlib.h>
 #include <stddef.h>
 
+//File data type declaration
 typedef FILE* file;
 
-void fcontrol(file);												
-size_t flen(file);	
-void fview(file);													
-void fcopy(file,file);	
-int fcompare(file,file);
-long int fsearch(file,char*);
+void fcontrol(file);		//Function initializing a file (close the program if the file pointer is null)										
+size_t flen(file);		//Function returning an unsigned integer value about the lenght in characters of a text file	
+void fview(file);		//Function visualizing the content of a text file
+void fcopy(file,file);		//Function copying the content of a text file to another (in r+ it overwrites, in w it writes a new text)
+int fcompare(file,file);	//Function returning an integer value about the value difference between the characters in two text files
+long int fsearch(file,char*);	//Function returning the position of the first character of a string inside a text file, if the string isn't find it returns <0
+
 
 void fcontrol(file FilePointer){
 	if( FilePointer==NULL ){	perror("Error");	exit(1); }		
